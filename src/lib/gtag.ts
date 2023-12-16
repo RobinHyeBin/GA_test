@@ -1,3 +1,5 @@
+type EventNames = Gtag.EventNames | "submit_form";
+
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
@@ -9,7 +11,7 @@ export const pageview = (url: URL) => {
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const event = (
-  action: Gtag.EventNames,
+  action: EventNames,
   { event_category, event_label, value }: Gtag.EventParams
 ) => {
   window.gtag("event", action, {
