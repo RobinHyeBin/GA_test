@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { event } from "../lib/gtag";
+import PageLayout from "../components/PageLayout";
 
 const SignUp = () => {
   useEffect(() => {
@@ -8,7 +9,7 @@ const SignUp = () => {
     });
   }, []);
 
-  return <div>SignUp</div>;
+  return <PageLayout>SignUp</PageLayout>;
 };
 
 export default SignUp;
